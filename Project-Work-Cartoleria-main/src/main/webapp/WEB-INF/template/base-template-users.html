@@ -1,0 +1,147 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<!-- FRAMMENTO HEAD -->
+	<head th:fragment="headFragment">
+		<meta charset="ISO-8859-1">
+		<title th:text="${title}"></title>
+		<meta name="viewport" content="width=! initial-scale=1.0" />
+	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
+	     <link href="Homepage.css" rel="stylesheet" />
+	     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+	     <script src="https://kit.fontawesome.com/d91ccb3073.js"></script>
+	</head>
+	
+	<body>
+	
+		<!-- FRAMMENTO NAVBAR -->
+		<nav th:fragment="navFragmentUser" class="navbar navbar-expand-lg navbar-light bg-light" style="margin-top: -20px;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img id="logo" th:src="@{static/image/Cancelleria_ArtSquare.png}" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false" style="color: #c09561;" th:text="#{label.home}"></button>
+                            
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#" th:text="#{label.home}"></a></li>
+                                <li><a class="dropdown-item" th:href="@{WEB-INF/view/Shop.html}" th:text="#{label.promo}"></a></li>
+                                <li><a class="dropdown-item" href="#" th:text="#{label.workwithus}"></a></li>
+                                <!--form da inserire per cv e mail-->
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false" style="color: #c09561;" th:text="#{label.categories}"></button>
+                            
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#" th:text="#{label.stationary}"></a></li>
+                                <li><a class="dropdown-item" href="#" th:text="#{label.paper}"></a></li>
+                                <li><a class="dropdown-item" href="#" th:text="#{label.backpacks}"></a></li>
+                                <li><a class="dropdown-item" href="#" th:text="#{label.arts}"></a></li>
+                                <li><a class="dropdown-item" href="#" th:text="#{label.stylographics}"></a></li>
+                                <li><a class="dropdown-item" href="#" th:text="#{label.tech}"></a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false" style="color: #c09561;" th:text="#{label.accessories}"></button>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#" th:text="#{label.workinprogress}"></a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false" style="color: #c09561;" th:text="#{label.contactus}"></button>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#" th:text="#{social.instagram}"></a></li>
+                                <li><a class="dropdown-item" href="#" th:text="#{social.facebook}"></a></li>
+                                <li><a class="dropdown-item" href="#" th:text="#{social.twitter}"></a></li>
+                                <li><a class="dropdown-item" href="#" th:text="#{social.whatsapp}"></a></li>
+                                <li><a class="dropdown-item" href="#" th:text="#{social.gmail}"></a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn btn-light" th:text="#{btn.login}"></button>
+                    <button type="button" class="btn btn-light" th:text="#{btn.register}"></button>
+                </div>
+            </div>
+        </nav>
+	
+		<!-- FRAMMENTO FOOTER USERS -->
+		<footer id="footer" th:fragment="footerFragmentUser" class="py-3 my-4 mt-auto container">
+                   <img th:src="@{static/image/wave1.png}" class="footer-img" />
+                   <div class="container">
+                       <div class="row">
+                           <div class="col-md-4 footer-box">
+                               <img th:src="@{static/image/Cancelleria_ArtSquare.png}">
+                               <!--logo-->
+                               <p th:text="#{company.copyright}">
+                               </p>
+                           </div>
+                           <div class="col-md-4 footer-box">
+                               <p th:text="#{label.wheretofindus}"><b></b></p>
+                               <p><i class="fa-solid fa-map-location" th:text="#{company.address}"></i></p>
+                               <p th:text="#{company.phone}"><i class="fa fa-phone"></i></p>
+                               <p th:text="#{company.email}"><i class="fa fa-envelope-o"></i></p>
+                           </div>
+
+                           <div class="col-md-4 footer-box">
+                               <p th:text="#{label.newsletter}"><b></b></p>
+                               <input type="email" class="form-control" placeholder="Inserisci la tua e-mail">
+                               <button type="button" class="btn btn-light" th:text="#{btn.subscribe}"></button>
+                           </div>
+                       </div>
+                   </div>
+               </footer>
+                
+                <!-- FRAMMENTO FOOTER ADMIN -->
+               <section id="footer">
+     				<div class="pulsanti">
+			          <a th:href="@{/utenti}">  
+			            <button type="button" class="btn btn-link" th:text="#{label.clientsmanagement}"></button>
+			          </a>
+			          <a href="area_ordini.html">  
+			            <button type="button" class="btn btn-link" th:text="#{label.ordersmanagement}"></button>
+			          </a>
+			          <a href="area_prodotti_e_categorie.html">  
+			            <button type="button" class="btn btn-link" th:text="#{label.productsmanagement}"></button>
+			          </a>
+			    </div>
+			    
+			    <div class="container">
+                       <div class="row">
+                           <div class="col-md-4 footer-box">
+                               <img th:src="@{static/image/Cancelleria_ArtSquare.png}">
+                               <!--logo-->
+                               <p th:text="#{company.copyright}">
+                               </p>
+                           </div>
+                           <div class="col-md-4 footer-box">
+                               <p th:text="#{label.wheretofindus}"><b></b></p>
+                               <p><i class="fa-solid fa-map-location" th:text="#{company.address}"></i></p>
+                               <p th:text="#{company.phone}"><i class="fa fa-phone"></i></p>
+                               <p th:text="#{company.email}"><i class="fa fa-envelope-o"></i></p>
+                           </div>
+
+                           <div class="col-md-4 footer-box">
+                               <p th:text="#{label.newsletter}"><b></b></p>
+                               <input type="email" class="form-control" placeholder="Inserisci la tua e-mail">
+                               <button type="button" class="btn btn-light" th:text="#{btn.subscribe}"></button>
+                           </div>
+					</div>
+			      </div>
+   				</section>
+	</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="it" class="h-100">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=! initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link th:href="@{static/css/Homepage.css}" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
+    <script src="https://kit.fontawesome.com/d91ccb3073.js"></script>
+    <script th:src="@{static/javascript/Homepage.js}"></script>
+    <title>Homepage</title>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <!--INIZIO NAVBAR-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-top: -20px;">
+            <div class="container-fluid">
+                <a class="navbar-brand" th:href="@{/}"><img id="logo" th:src="@{static/image/Cancelleria_ArtSquare.png}" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false" style="color: #c09561;">
+                                Home
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                 <li><a class="dropdown-item" th:href="@{/}">Homepage</a></li>
+                                <li><a class="dropdown-item" th:href="@{/lavoraconnoi}">Lavora con noi</a></li>
+                                <!--form da inserire per cv e mail-->
+
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false" style="color: #c09561;">
+                                Categorie
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" th:href="@{/cancelleria}">Cancelleria</a></li>
+                                <li><a class="dropdown-item" th:href="@{/carta}">Carta</a></li>
+                                <li><a class="dropdown-item" th:href="@{/zaini}">Zaini e borse</a></li>
+                                <li><a class="dropdown-item" th:href="@{/bellearti}">Belle Arti</a></li>
+                                <li><a class="dropdown-item" th:href="@{/penne}">Penne Stilografiche</a></li>
+                                <li><a class="dropdown-item" th:href="@{/informatica}">Informatica</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false" style="color: #c09561;">
+                                Accessori
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Work in progress</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false" style="color: #c09561;">
+                                Contattaci
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="https://www.instagram.com/cartoleria_moon/">Instagram</a></li>
+                                <li><a class="dropdown-item" href="#">Facebook</a></li>
+                                <li><a class="dropdown-item" href="#">Twitter</a></li>
+                                <li><a class="dropdown-item" href="#">Whatsapp</a></li>
+                                <li><a class="dropdown-item" href="#">Gmail</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <a th:href="@{/login}">
+                        <button type="button" class="btn btn-primary">Login</button>
+                    </a>
+                    <a th:href="@{/registrazione}">
+                        <button type="button" class="btn btn-primary">Registrati</button>
+                    </a>
+
+
+                </div>
+               
+            </div>
+            
+        </nav>
+        </div>
+        <!--FINE NAVBAR-->
+        <!--SEZIONE BANNER-->
+        <section id="banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="promo-title">Cartoleria Moon</p>
+                        <p><em>Shop Online</em> <br />
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="container2">
+                            <p class="letter letter-M">M</p>
+                            <div class="moon">
+                                <div class="orbit">
+                                    <p>O</p>
+                                </div>
+                            </div>
+                            <p class="letter letter-N">N</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Gallery-->
+       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img th:src="@{static/image/copertina-homepage.jpeg}" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img th:src="@{static/image/copertina-homepage1.gif}" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img th:src="@{static/image/copertina-homepage2.gif}" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img th:src="@{static/image/copertina-homepage3.gif}" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img th:src="@{static/image/copertina-homepage4.gif}" class="d-block w-100" alt="...">
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+
+
+
+        <!--FINE BANNER-->
+
+
+        <!--INIZIO SEZIONE SERVIZI-->
+
+        <section id="services">
+
+            <div class="container text-center">
+                <h1 class="title">COSA OFFRIAMO?</h1>
+                <div class="row text-center">
+                    <div class="col-md-4 services">
+                        <img th:src="@{static/image/delivery.png}" style="height: 200px; width: 300px;">
+
+                        <h6>Spedizione sicura e rapida</h6>
+                    </div>
+                    <div class="col-md-4 services">
+                        <img th:src="@{static/image/money.png}" style="height: 200px; width: 200px;">
+
+                        <h6>100% Rimborso garantito</h6>
+                    </div>
+                    <div class="col-md-4 services">
+                        <img th:src="@{static/image/quality.png}" style="height: 200px; width: 200px;">
+
+                        <h6>Prodotti di alta qualità</h6>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <!--FINE SEZIONE SERVIZI-->
+
+        <!--SEZIONE SOCIAL MEDIA-->
+        <section id="social-media">
+            <div class="container text-center">
+                <p>TROVACI SUI SOCIAL</p>
+                <div class="row g-0">
+
+                    <div class="col-md-3 col-sm-12">
+                        <div class="social-icon1">
+                            <img class="social" th:src="@{static/image/linkedin-icon.png}" alt="Profilo Linkedin" />
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12">
+                        <div class="social-icon2">
+                            <a href="https://www.instagram.com/cartoleria_moon/" target="_blank"><img class="social" th:src="@{static/image/instagram-icon.png}" alt="Profilo Instagram" /></a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12">
+                        <div class="social-icon3">
+                            <img class="social" th:src="@{static/image/facebook-icon.png}" alt="Pagina ufficiale Facebook" />
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12">
+                        <div class="social-icon4">
+                            <img class="social" th:src="@{static/image/twitter-icon.png}" alt="Pagina twitter" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!--FINE SEZIONE SOCIAL MEDIA-->
+
+        <!--FOOTER-->
+        <section id="footer">
+            <img th:src="@{static/image/wave1.png}" class="footer-img" />
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 footer-box">
+                        <img th:src="@{static/image/Cancelleria_ArtSquare.png}">
+                        <!--logo-->
+                        <p>© Cartoleria Moon. All Rights Reserved
+                        </p>
+                    </div>
+                    <div class="col-md-4 footer-box">
+                        <p><b>DOVE TROVARCI:</b></p>
+                        <p><i class="fa-solid fa-map-location"></i> Via delle Ginestre, 89 (RM)</p>
+                        <p><i class="fa fa-phone"></i> 081-540-9870</p>
+                        <p><i class="fa fa-envelope-o"></i> Moon@info.com</p>
+                    </div>
+
+                    <div class="col-md-4 footer-box">
+                        <p><b>ISCRIVITI ALLA NEWSLETTER</b></p>
+                        <input type="email" class="form-control" placeholder="Inserisci la tua e-mail">
+                        <button type="button" class="btn btn-primary">Iscriviti</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+
+</html>

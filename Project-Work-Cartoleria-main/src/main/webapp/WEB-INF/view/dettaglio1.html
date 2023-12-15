@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="it" class="h-100">
+	<head>
+	<meta charset="UTF-8">
+		<title>Dettaglio Prodotto</title>
+	</head>
+	<body>
+		<p th:text="${prodotto.nomeProdotto}"></p>
+		<a th:text="'Aggiungi al carrello'" th:href="@{dettaglio/aggiungi(id=${prodotto.id})}"></a>
+		<div th:if="${add}" th:text="'Articolo aggiunto al carrello'"></div>
+		<a th:text="'Torna indietro'" th:href="@{${redirect}}"></a>
+	</body>
+</html>

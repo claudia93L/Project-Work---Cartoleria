@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=! initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link href="penne_stilografiche.css" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css"
+        integrity="sha384-X8QTME3FCg1DLb58++lPvsjbQoCT9bp3MsUU3grbIny/3ZwUJkRNO8NPW6zqzuW9" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/d91ccb3073.js" crossorigin="anonymous"></script>
+    <title>Penne Stilografiche</title>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+
+        <!--INIZIO NAVBAR-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-top: -20px;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img id="logo" src="Cancelleria ArtSquare.png" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false" style="color: #c09561;">
+                                Home
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="Homepage.html">Homepage</a></li>
+                                <li><a class="dropdown-item" href="Shop.html">Offerte</a></li>
+                                <li><a class="dropdown-item" href="lavora_con_noi.html">Lavora con noi</a></li>
+                                <!--form da inserire per cv e mail-->
+
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false" style="color: #c09561;">
+                                Categorie
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="cancelleria.html">Cancelleria</a></li>
+                                <li><a class="dropdown-item" href="carta.html">Carta</a></li>
+                                <li><a class="dropdown-item" href="zaini.html">Zaini e borse</a></li>
+                                <li><a class="dropdown-item" href="belle_arti.html">Belle Arti</a></li>
+                                <li><a class="dropdown-item" href="penne_stilografiche.html">Penne Stilografiche</a></li>
+                                <li><a class="dropdown-item" href="informatica.html">Informatica</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false" style="color: #c09561;">
+                                Accessori
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Work in progress</a></li>
+                                
+
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false" style="color: #c09561;">
+                                Contattaci
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Instagram</a></li>
+                                <li><a class="dropdown-item" href="#">Facebook</a></li>
+                                <li><a class="dropdown-item" href="#">Twitter</a></li>
+                                <li><a class="dropdown-item" href="#">Whatsapp</a></li>
+                                <li><a class="dropdown-item" href="#">Gmail</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="Carrello.html"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart"><i class="fas fa-shopping-cart"></i>(<span class="total-count"></span>)</button></a>
+                
+                    <a href="FormAccesso.html">
+                        <button type="button" class="btn btn-primary">Login</button>
+                      </a>
+                      <a href="Form.html">
+                        <button type="button" class="btn btn-primary">Registrati</button>
+                      </a>
+                    
+
+
+                </div>
+            </div>
+        </nav>
+        <!--FINE NAVBAR-->
+        <!--PRIMA FILA DI CARD-->
+
+        <div class="row gy-5">
+            <!--gy-5 aggiunge padding verticale tra le card (è un gutter)-->
+            <div class="col-md-3 col-sm-12">
+                <div class="card">
+                    <img class="card-img-top" src="penna.stilografica.scuola.jpg" />
+                    <div class="card-body">
+                        <h5 class="card-title"><em>Penna Stilografica (Colore: Legno)
+                            </em></h5>
+                        <h6>12.89€</h6>
+                       
+                        
+                        <br />
+                        <a href="#" data-name="Legno" data-price="12.89" class="add-to-cart btn btn-primary">Aggiungi al
+                            carrello</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-12">
+                <div class="card">
+                    <img class="card-img-top" src="penne.stilografiche.calligrafia.jpg" />
+                    <div class="card-body">
+                        <h5 class="card-title"><em>Set Penne Stilografiche (2pz.)
+                            </em></h5>
+                        <h6>26.80€ </h6>
+                        <br />
+                        <a href="#" data-name="Penne" data-price="26.80" class="add-to-cart btn btn-primary">Aggiungi al
+                            carrello</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-12">
+                <div class="card">
+                    <img class="card-img-top" src="penna.stilografica.century.fountain.pens.jpg" />
+                    <div class="card-body">
+                        <h5 class="card-title"><em>Penna Stilografica Fountain Pens (Platinum) </em></h5>
+                        <h6>35.90€</h6>
+                        <br />
+                        <a href="#" data-name="Fountain" data-price="35.90" class="add-to-cart btn btn-primary">Aggiungi al
+                            carrello</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-12">
+                <div class="card">
+                    <img class="card-img-top" src="penna.stilografica.argent.blue.jpg" />
+                    <div class="card-body">
+                        <h5 class="card-title"><em> Penna Stilografica Argent Blue</em></h5>
+                        <h6>42.80€</h6>
+                        
+                        
+                        <br />
+                        <a href="#" data-name="Penna" data-price="42.80" class="add-to-cart btn btn-primary">Aggiungi al
+                            carrello</a>
+                    </div>
+                </div>
+            </div>
+            <br /><br />
+            <!--SECONDA FILA DI CARD-->
+
+            <div class="col-md-3 col-sm-12">
+                <div class="card">
+                    <!--immagine inserita affinchè sia ottimizzata per stare in cima alla card-->
+                    <img class="card-img-top" src="penna.stilografica.kaweko.jpg" />
+                    <!--corpo della-->
+                    <div class="card-body">
+                        <h5 class="card-title"><em>Penna Stilografica Kaweco</em></h5>
+                        <h6>46.70€</h6>
+                        
+                        
+                        <br />
+                        <a href="#" data-name="Orange" data-price="0.5" class="add-to-cart btn btn-primary">Aggiungi al
+                            carrello</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-12">
+                <div class="card">
+                    <img class="card-img-top" src="penna.stilografica.luxory.jpg" />
+                    <div class="card-body">
+                        <h5 class="card-title"><em>Penna Stilografica Luxory</em></h5>
+                        <h6>67.80€</h6>
+                        <br />
+                        <a href="#" data-name="Orange" data-price="0.5" class="add-to-cart btn btn-primary">Aggiungi al
+                            carrello</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-12">
+                <div class="card">
+                    <img class="card-img-top" src="penna.stilografica.parker.sonnet.jpg" />
+                    <div class="card-body">
+                        <h5 class="card-title"><em>Penna Stilografica Parker Sonnet</em></h5>
+                        <h6>89.90€</h6>
+                        <br />
+                        <a href="#" data-name="Orange" data-price="0.5" class="add-to-cart btn btn-primary">Aggiungi al
+                            carrello</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-12">
+                <div class="card">
+                    <img class="card-img-top" src="penna.stilografica.mont.blanc.jpg" />
+                    <div class="card-body">
+                        <h5 class="card-title"><em>Penna Stilografica Mont Blanc</em></h5>
+                        <h6>111.90€</h6>
+                        <br />
+                        <a href="#" data-name="Orange" data-price="0.5" class="add-to-cart btn btn-primary">Aggiungi al
+                            carrello</a>
+                    </div>
+                </div>
+            </div>
+            <br /><br />
+            <!--TERZA FILA DI CARD-->
+
+            <div class="col-md-3 col-sm-12">
+                <div class="card">
+                    <img class="card-img-top" src="penna.stilografica.cartier.jpg" />
+                    <div class="card-body">
+                        <h5 class="card-title"><em>Penna Stilografica Cartier</em></h5>
+                        <h6>150.89€</h6>
+                        <br />
+                        <a href="#" data-name="Orange" data-price="0.5" class="add-to-cart btn btn-primary">Aggiungi al
+                            carrello</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <div class="card">
+                    <img class="card-img-top" src="penna.stilografica.golden.genie.jpg" />
+                    <div class="card-body">
+                        <h5 class="card-title"><em>Penna Stilografica Golden Genie</em></h5>
+                        <h6>98.90€</h6>
+                        
+                        <br />
+                        <a href="#" data-name="Orange" data-price="0.5" class="add-to-cart btn btn-primary">Aggiungi al
+                            carrello</a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-12">
+                <div class="card">
+                    <img class="card-img-top" src="penna.stilografica.mont.blanc.white.jpg" />
+                    <div class="card-body">
+                        <h5 class="card-title"><em>Penna Stilografica Mont Blanc (White Set)</em></h5>
+                        <h6>240.00€</h6>
+                        <br />
+                        <a href="#" data-name="Orange" data-price="0.5" class="add-to-cart btn btn-primary">Aggiungi al
+                            carrello</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-12">
+                <div class="card">
+                    <img class="card-img-top" src="penna.stilografica.kensey.jpg" />
+                    <div class="card-body">
+                        <h5 class="card-title"><em>Penna Stilografica Kensey </em></h5>
+                        <h6>150.90€</h6>
+                        <br />
+                        <a href="#" data-name="Orange" data-price="0.5" class="add-to-cart btn btn-primary">Aggiungi al
+                            carrello</a>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <!--FINE TERZA FILA DI CARD-->
+        </div>
+    </div>
+
+</div>
+</div>
+<!--Inizio footer-->
+<section id="footer">
+<img src="wave1.png" class="footer-img" />
+<div class="container">
+<div class="row">
+    <div class="col-md-4 footer-box">
+        <img src="Cancelleria ArtSquare.png">
+        <!--logo-->
+        <p>© Cartoleria Moon. All Rights Reserved
+        </p>
+    </div>
+    <div class="col-md-4 footer-box">
+        <p><b>DOVE TROVARCI:</b></p>
+        <p><i class="fa-solid fa-map-location"></i> Via delle Ginestre, 89 (RM)</p>
+        <p><i class="fa fa-phone"></i> 081-540-9870</p>
+        <p><i class="fa fa-envelope-o"></i> Moon@info.com</p>
+    </div>
+
+    <div class="col-md-4 footer-box">
+        <p><b>ISCRIVITI ALLA NEWSLETTER</b></p>
+        <input type="email" class="form-control" placeholder="Inserisci la tua e-mail">
+        <button type="button" class="btn btn-light">Iscriviti</button>
+    </div>
+</div>
+</div>
+</section>
+<script src="Cart.js"></script>
+</body>
+
+</html>

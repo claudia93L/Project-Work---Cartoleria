@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="it" class="h-100">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link th:href=@{static/css/area_clienti.css} rel="stylesheet" />
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
+  <script src="https://kit.fontawesome.com/d91ccb3073.js"></script>
+    <title>Area Admin</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+
+  
+        
+        <!--banner-->
+        <section>
+            <h2>PANNELLO DI AMMINISTRAZIONE</h2>
+        </section>
+
+        <header><h3>Gestione Clienti</h3></header>
+
+       <!--CARD-->
+       <div class="row mt-4">
+        <div class="col-7">
+          <div class="card">
+            <div class="card-body">
+                    <!--inizio table CLIENTI-->
+        
+            <table class="table" style="float: left">
+                <thead>
+                    <tr>
+                        <th th:text="#{label.name}" scope="col"></th>
+                        <th th:text="#{label.surname}" scope="col"></th>
+                        <th th:text="#{label.username}" scope="col"></th>
+                        <th th:text="#{label.email}" scope="col"></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="c : ${utenti}">
+						<td th:text="${c.nome}"></td>
+						<td th:text="${c.cognome}"></td>
+						<td th:text="${c.profilo.username}"></td>
+						<td th:text="${c.email}"></td>
+						<td class="text-end">
+							<a th:href="@{/utenti(id=${c.id})}" class="btn btn-light large-button" th:text="#{btn.show}"></a>
+							<a th:href="@{/confermaeliminazione(id=${c.id}, type='utente')}" class="btn btn-danger large-button" th:text="#{btn.delete}"></a>
+						</td>
+					</tr>
+                </tbody>
+            </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-1"></div>
+		<div class="col-4">
+          <div th:if="${mostraForm}" class="card">
+            <div class="card-body">
+                <br class="mb-3">
+                    <form method="POST" th:object="${utente}">
+						<div class="row">
+							<div class="col-12">
+								<label for="name" th:text="#{label.name} + ':'"></label>
+								<input type="text" id="name" th:field="*{nome}" 
+									class="form-control" readonly="readonly">
+								<p th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}" 
+									class="text-danger"></p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<label for="cognome" th:text="#{label.surname} + ':'"></label>
+								<input type="text" id="cognome" th:field="*{cognome}" class="form-control" 
+									readonly="readonly">
+								<p th:if="${#fields.hasErrors('cognome')}" th:errors="*{cognome}" 
+									class="text-danger"></p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<label for="username" th:text="#{label.username} + ':'"></label>
+								<input type="text" id="username" th:field="*{profilo.username}" class="form-control" 
+									readonly="readonly">
+								<p th:if="${#fields.hasErrors('profilo.username')}" th:errors="*{profilo.username}" 
+									class="text-danger"></p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<label for="email" th:text="#{label.email} + ':'"></label>
+								<input type="text" id="email" th:field="*{email}" class="form-control" 
+									readonly="readonly">
+								<p th:if="${#fields.hasErrors('email')}" th:errors="*{email}" 
+									class="text-danger"></p>
+							</div>
+							<div class="col-12">
+								<label for="indirizzo" th:text="#{label.address} + ':'"></label>
+								<input type="text" id="indirizzo" th:field="*{indirizzo}" class="form-control" 
+									readonly="readonly">
+								<p th:if="${#fields.hasErrors('indirizzo')}" th:errors="*{indirizzo}" 
+									class="text-danger"></p>
+							</div>
+							<div class="col-12">
+								<label for="citta" th:text="#{label.town} + ':'"></label>
+								<input type="text" id="citta" th:field="*{citta}" class="form-control" 
+									readonly="readonly">
+								<p th:if="${#fields.hasErrors('citta')}" th:errors="*{citta}" 
+									class="text-danger"></p>
+							</div>
+							<div class="col-12">
+								<label for="regione" th:text="#{label.region} + ':'"></label>
+								<input type="text" id="regione" th:field="*{regione}" class="form-control" 
+									readonly="readonly">
+								<p th:if="${#fields.hasErrors('regione')}" th:errors="*{regione}" 
+									class="text-danger"></p>
+							</div>
+							<div class="col-12">
+								<label for="cap" th:text="#{label.cap} + ':'"></label>
+								<input type="text" id="cap" th:field="*{cap}" class="form-control" 
+									readonly="readonly">
+								<p th:if="${#fields.hasErrors('cap')}" th:errors="*{cap}" 
+									class="text-danger"></p>
+							</div>
+							<div class="col-12">
+								<label for="provincia" th:text="#{label.province} + ':'"></label>
+								<input type="text" id="provincia" th:field="*{provincia}" class="form-control" 
+									readonly="readonly">
+								<p th:if="${#fields.hasErrors('provincia')}" th:errors="*{provincia}" 
+									class="text-danger"></p>
+							</div>
+							<div class="col-12">
+								<label for="telefono" th:text="#{label.tel} + ':'"></label>
+								<input type="text" id="telefono" th:field="*{telefono}" class="form-control" 
+									readonly="readonly">
+								<p th:if="${#fields.hasErrors('telefono')}" th:errors="*{telefono}" 
+									class="text-danger"></p>
+							</div>
+						</div>
+						<div class="row mt-4">
+							<div class="col-12 text-center">
+								<a th:href="@{/utenti}" th:text="#{btn.back}" class="btn btn-primary large-button"></a>
+							</div>
+						</div>
+					</form>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+                 <!--FINE CARD-->
+
+     
+            
+
+    <!--FOOTER-->
+    <section id="footer">
+        <div class="pulsanti">
+                
+              <a th:href="@{/utenti}">  
+                <button type="button" class="btn btn-link">Gestione Cliente</button>
+              </a>
+              <a th:href="@{/ordini}">  
+                <button type="button" class="btn btn-link">Gestione Ordinativo</button>
+              </a>
+              <a th:href="@{/prodotti}">  
+                <button type="button" class="btn btn-link">Gestione Prodotti</button>
+              </a>
+
+     
+        </div>
+       
+    </section>
+    </body>
+    </html>

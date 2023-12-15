@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+   <title>Elimina</title>
+   <style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    * {box-sizing: border-box;}
+   
+    button {
+      background-color: #04AA6D;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+    
+    button:hover {
+      opacity:1;
+    }
+    
+
+    .cancelbtn, .deletebtn {
+      float: left;
+      width: 50%;
+    }
+    
+
+    .cancelbtn {
+      background-color: #ccc;
+      color: black;
+    }
+    
+    .deletebtn {
+      background-color: #f44336;
+    }
+    
+    .container {
+      padding: 16px;
+      text-align: center;
+    }
+    
+    .modal {
+      
+      position: fixed; 
+      z-index: 1; 
+      left: 0;
+      top: 0;
+      width: 100%; 
+      height: 100%; 
+      overflow: auto; 
+      background-color: #474e5d;
+      padding-top: 50px;
+    }
+    
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto 15% auto; 
+      border: 1px solid #888;
+      width: 80%; 
+    }
+    
+    
+    hr {
+      border: 1px solid #f1f1f1;
+      margin-bottom: 25px;
+    }
+     
+  
+    .close {
+      position: absolute;
+      right: 35px;
+      top: 15px;
+      font-size: 40px;
+      font-weight: bold;
+      color: #f1f1f1;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #f44336;
+      cursor: pointer;
+    }
+    
+  
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }</style>
+</head>
+
+<body>
+  <form class="modal-content" action="#">
+    <div class="container">
+      <h1>Attenzione!</h1>
+      <p>Sei sicuro di voler eliminare?</p>
+    
+      <div class="clearfix">
+        <button type="button"  class="cancelbtn">Annulla</button>
+        <button type="button"  class="deletebtn">Conferma</button>
+      </div>
+    </div>
+  </form>
+</div>
+</body>
+
+</html>

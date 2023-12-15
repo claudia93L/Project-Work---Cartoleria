@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="it" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link th:href="@{static/css/area_prodotti_e_categorie1.css}" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
+    <script src="https://kit.fontawesome.com/d91ccb3073.js"></script>
+    <title>Area Admin</title>
+</head>
+<body>
+    <div class="container-fluid">
+
+
+        <!--FINE NAVBAR-->
+        <section ><h2>PANNELLO DI AMMINISTRAZIONE</h2></section>
+      <!--inizio table prodotti-->
+    
+      <header>Gestione Prodotti</header>
+          <!--CARD-->
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th th:text="#{label.description}" scope="col"></th>
+                                <th th:text="#{label.price}" scope="col"></th>
+                                <th th:text="#{label.productcode}" scope="col"></th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        	<tr th:each="p : ${prodotti}">
+								<td th:text="${p.nomeProdotto}"></td>
+								<td th:text="${p.prezzo}"></td>
+								<td th:text="${p.codiceProdotto}"></td>
+								<td class="text-end">
+									<a th:href="@{/prodotti(id=${p.id})}" class="btn btn-light large-button" th:text="#{btn.edit}"></a>
+									<a th:href="@{/confermaeliminazione(id=${p.id}, type='prodotto')}" class="btn btn-danger large-button" th:text="#{btn.delete}"></a>
+								</td>
+							</tr>							                
+                        </tbody>
+                    </table>  
+                </div>
+              </div>
+            </div>
+            <div class="col-1"></div>
+			<div class="col-4">
+	          <div class="card">
+	            <div class="card-body">
+	                <br class="mb-3">
+	                    <form method="POST" action="prodotti/registra">
+	                    	<input type="hidden" th:value="${prodotto.id}" name="id">
+							<div class="row">
+								<div class="col-12">
+									<label for="nomeProdotto" th:text="#{label.name} + ':'"></label>
+									<input type="text" th:value="${prodotto.nomeProdotto}" id="name" name="nomeProdotto" class="form-control" required>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12">
+									<label for="descrizione" th:text="#{label.description} + ':'"></label>
+									<textarea style="resize:none;" th:text="${prodotto.descrizione}" id="name" name="descrizione" class="form-control" required></textarea>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12">
+									<label for="quantita" th:text="#{label.quantity} + ':'"></label>
+									<input type="number" th:value="${prodotto.quantita}" id="quantita" name="quantita" class="form-control" required>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12">
+									<label for="prezzo" th:text="#{label.price} + ':'"></label>
+									<input type="number" step="any" th:value="${prodotto.prezzo}" id="prezzo" name="prezzo" class="form-control" required>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12">
+									<label for="codiceProdotto" th:text="#{label.productcode} + ':'"></label>
+									<input type="text" th:value="${prodotto.codiceProdotto}" id="codiceProdotto" name="codiceProdotto" class="form-control" required>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12">
+									<label for="categoriaProdotto.descrizione" th:text="#{label.category} + ':'"></label>
+									<select id="categoriaProdotto.descrizione" name="categoria" class="form-select">
+										<option th:each="c: ${categorie}" th:value="${c.id}" th:text="${c.descrizione}" th:selected="${prodotto.categoriaProdotto != null AND c.id == prodotto.categoriaProdotto.id}"></option>
+									</select>
+								</div>
+							</div>
+							<div class="row mt-4">
+								<div class="col-12 text-center">
+									<input type="submit" th:value="'Registra'" class="btn btn-primary large-button">
+									<a th:href="@{/prodotti}" th:text="#{btn.back}" class="btn btn-secondary large-button"></a>
+								</div>
+							</div>
+						</form>
+	                </div>
+	            </div>
+	            <div class="card" th:if="${showForm != null}">
+	            <div class="card-body">
+	                <br class="mb-3">
+	                    <form method="POST" action="prodotti/immagine" enctype="multipart/form-data">
+	                    	<input type="hidden" th:value="${showForm}" name="fileName">
+							<div class="row">
+								<div class="col-12">
+									<label for="immagine" th:text="#{label.image} + ':'"></label>
+									<input type="file" id="immagine" name="image" class="form-control">
+								</div>
+							</div>
+							<div class="row mt-4">
+								<div class="col-12 text-center">
+									<input type="submit" th:value="'Carica'" class="btn btn-primary large-button">
+									<a th:href="@{/prodotti}" th:text="#{btn.back}" class="btn btn-secondary large-button"></a>
+								</div>
+							</div>
+						</form>
+	                </div>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+                     <!--FINE CARD-->
+     
+                      <!--FOOTER-->
+        <section id="footer"> 
+            <div class="pulsanti">
+                
+                  <a th:href="@{/utenti}">  
+	                <button type="button" class="btn btn-link">Gestione Cliente</button>
+	              </a>
+	              <a th:href="@{/ordini}">  
+	                <button type="button" class="btn btn-link">Gestione Ordinativo</button>
+	              </a>
+	              <a th:href="@{/prodotti}">  
+	                <button type="button" class="btn btn-link">Gestione Prodotti</button>
+	              </a>
+            </div>
+        </section>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="it" class="h-100">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=! initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+   <link th:href="@{static/css/zaini.css}" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
+    <script src="https://kit.fontawesome.com/d91ccb3073.js"></script>
+    <title>Informatica</title>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+
+        <!--INIZIO NAVBAR-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-top: -20px;">
+            <div class="container-fluid">
+                <a class="navbar-brand" th:href="@{/}"><img id="logo" th:src="@{static/image/Cancelleria_ArtSquare.png}" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false" style="color: #c09561;">
+                                Home
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" th:href="@{/}">Homepage</a></li>
+                                <li><a class="dropdown-item" th:href="@{/lavoraconnoi}">Lavora con noi</a></li>
+                                <!--form da inserire per cv e mail-->
+
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false" style="color: #c09561;">
+                                Categorie
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" th:href="@{/cancelleria}">Cancelleria</a></li>
+                                <li><a class="dropdown-item" th:href="@{/carta}">Carta</a></li>
+                                <li><a class="dropdown-item" th:href="@{/zaini}">Zaini e borse</a></li>
+                                <li><a class="dropdown-item" th:href="@{/bellearti}">Belle Arti</a></li>
+                                <li><a class="dropdown-item" th:href="@{/penne}">Penne Stilografiche</a></li>
+                                <li><a class="dropdown-item" th:href="@{/informatica}">Informatica</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false" style="color: #c09561;">
+                                Accessori
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Work in progress</a></li>
+                                
+
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false" style="color: #c09561;">
+                                Contattaci
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Instagram</a></li>
+                                <li><a class="dropdown-item" href="#">Facebook</a></li>
+                                <li><a class="dropdown-item" href="#">Twitter</a></li>
+                                <li><a class="dropdown-item" href="#">Whatsapp</a></li>
+                                <li><a class="dropdown-item" href="#">Gmail</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                        <a th:href="@{/carrello}"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">
+                            <i class="fas fa-shopping-cart"></i></button></a>
+                    <a th:href="@{/login}">
+                        <button type="button" class="btn btn-primary">Login</button>
+                    </a>
+                    <a th:href="@{/registrazione}">
+                        <button type="button" class="btn btn-primary">Registrati</button>
+                    </a>
+
+
+                </div>
+            </div>
+        </nav>
+        <!--FINE NAVBAR-->
+        <!--PRIMA FILA DI CARD-->
+
+       		   <div class="row gy-5">
+                    <!--gy-5 aggiunge padding verticale tra le card (è un gutter)-->
+                    <div class="col-md-3 col-sm-12" th:each="prodotto : ${prodotti}">
+                        <div class="card" th:id="${prodotto.id}">
+                            <img class="card-img-top" th:src="@{'static/prodotti/' + ${prodotto.id} + '.png'}" />
+                            <div class="card-body">
+                                <h5 class="card-title" th:text="${prodotto.nomeProdotto}"><em></em></h5>
+                                <h6 th:text="${prodotto.prezzo} + ' Euro'"></h6>
+                                <br />
+                                <a th:href="@{/dettaglio(id=${prodotto.id}, redirect='/informatica')}" type="button" class="btn btn-primary">Acquista</a>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+        
+            
+            <!--FINE TERZA FILA DI CARD-->
+        </div>
+<!--Inizio footer-->
+<section id="footer">
+    <img th:src="@{static/image/wave1.png}" class="footer-img" />
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 footer-box">
+                <img th:src="@{static/image/Cancelleria_ArtSquare.png}">
+                <!--logo-->
+                <p>© Cartoleria Moon. All Rights Reserved
+                </p>
+            </div>
+            <div class="col-md-4 footer-box">
+                <p><b>DOVE TROVARCI:</b></p>
+                <p><i class="fa-solid fa-map-location"></i> Via delle Ginestre, 89 (RM)</p>
+                <p><i class="fa fa-phone"></i> 081-540-9870</p>
+                <p><i class="fa fa-envelope-o"></i> Moon@info.com</p>
+            </div>
+
+            <div class="col-md-4 footer-box">
+                <p><b>ISCRIVITI ALLA NEWSLETTER</b></p>
+                <input type="email" class="form-control" placeholder="Inserisci la tua e-mail">
+                <button type="button" class="btn btn-primary">Iscriviti</button>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+
+</html>

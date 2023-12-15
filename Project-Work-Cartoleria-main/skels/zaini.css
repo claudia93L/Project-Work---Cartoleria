@@ -1,0 +1,175 @@
+@charset "utf-8";
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-size: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body,
+html {
+    background-image: linear-gradient(to right, #f8f4ef
+    ,
+    #f8f4ef);
+    
+}
+
+.container-fluid {
+    width: 100%;
+    height: 100%;
+}
+
+/*navbar*/
+.nav-link {
+    padding: 10px 20px 5px 20px;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+
+}
+
+.nav-link::before {
+    content: "";
+    height: 3px;
+    width: 0%;
+    background-color:#c09561 ;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 3px;
+    transition: all 0.1s ease-in-out;
+}
+
+.nav-link:hover::before {
+
+    width: 100%;
+
+}
+
+nav {
+    height: 100px;
+    background-color: #c09561
+    ;
+
+
+}
+
+.navbar {
+    background-image: linear-gradient(to right, #f8f4ef
+    ,
+    #f8f4ef
+    );
+    color: #c09561;
+}
+
+.container .form-control {
+    border-radius: 20px;
+    margin-top: 25px;
+    max-width: 250px;
+}
+
+#logo{
+    padding-top: 30px;
+    width: 170px;
+    height: 170px;
+
+}
+/*Rendo i pulsanti piu interattivi*/
+
+.container .btn-primary {
+    background-color: #c09561;
+    color: #956f41;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 55px;
+    box-shadow: 0 6px 0 0 #8b622f;
+    transition: all 0.1s ease-in-out;
+    margin-top: 15px;
+}
+
+.btn-primary:active {
+    transform: translateY(10px);
+    box-shadow: 0 0 0 0 #956b37;
+}
+
+ .btn-primary {
+    background-color: #c09561;
+    color: #956f41;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 55px;
+    box-shadow: 0 6px 0 0 #8b622f;
+    transition: all 0.1s ease-in-out;
+    margin-top: 15px;
+}
+
+.btn-primary:active {
+    transform: translateY(10px);
+    box-shadow: 0 0 0 0 #956b37;
+}
+
+a:link {
+    text-decoration: none;
+  
+}
+
+/* link non visitato */
+a:link {
+    color: #956b37;
+}
+/*css footer*/
+a:hover {
+    color: #c09561;
+}
+
+#footer {
+    background-image: linear-gradient(to right, #f8f4ef
+    ,
+    #f8f4ef
+    );
+    color: #c09561;
+
+
+}
+
+.footer-img {
+    width: 100%;
+    
+}
+
+.footer-box {
+    padding: 20px;
+}
+
+.footer-box img {
+    width: 170px;
+    height: 170px;
+    margin-bottom: 20px;
+}
+
+.footer-box .form-control {
+    border-radius: 20px;
+    margin-top: 25px;
+    max-width: 250px;
+}
+
+.footer-box .btn-primary {
+    border-radius: 20px;
+    margin-top: 25px;
+    box-shadow: none;
+    border: none;
+    background-color: #c09561;
+    color: #956b37;
+}
+
+

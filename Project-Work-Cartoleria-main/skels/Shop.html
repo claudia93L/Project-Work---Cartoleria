@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=! initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link href="Shop.css" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css" integrity="sha384-X8QTME3FCg1DLb58++lPvsjbQoCT9bp3MsUU3grbIny/3ZwUJkRNO8NPW6zqzuW9" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/d91ccb3073.js" crossorigin="anonymous"></script>
+ 
+        <title>Offerte</title>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <!--INIZIO NAVBAR-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-top: -20px;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img id="logo" src="Cancelleria ArtSquare.png" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false" style="color: #c09561;">
+                                Home
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="Homepage.html">Homepage</a></li>
+                                <li><a class="dropdown-item" href="Shop.html">Offerte</a></li>
+                                <li><a class="dropdown-item" href="lavora_con_noi.html">Lavora con noi</a></li>
+                                <!--form da inserire per cv e mail-->
+
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false" style="color: #c09561;">
+                                Categorie
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="cancelleria.html">Cancelleria</a></li>
+                                <li><a class="dropdown-item" href="carta.html">Carta</a></li>
+                                <li><a class="dropdown-item" href="zaini.html">Zaini e borse</a></li>
+                                <li><a class="dropdown-item" href="belle_arti.html">Belle Arti</a></li>
+                                <li><a class="dropdown-item" href="penne_stilografiche.html">Penne Stilografiche</a></li>
+                                <li><a class="dropdown-item" href="informatica.html">Informatica</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false" style="color: #c09561;">
+                                Accessori
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Work in progress</a></li>
+                                
+
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false" style="color: #c09561;">
+                                Contattaci
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Instagram</a></li>
+                                <li><a class="dropdown-item" href="#">Facebook</a></li>
+                                <li><a class="dropdown-item" href="#">Twitter</a></li>
+                                <li><a class="dropdown-item" href="#">Whatsapp</a></li>
+                                <li><a class="dropdown-item" href="#">Gmail</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="Carrello.html"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button></a>
+                    
+                    <a href="FormAccesso.html">
+                        <button type="button" class="btn btn-primary">Login</button>
+                      </a>
+                      <a href="Form.html">
+                        <button type="button" class="btn btn-primary">Registrati</button>
+                      </a>
+                    
+
+
+                </div>
+            </div>
+        </nav>
+        <!--FINE NAVBAR-->
+
+         <!--PRIMA FILA DI CARD-->
+
+                <div class="row gy-5">
+                    <!--gy-5 aggiunge padding verticale tra le card (è un gutter)-->
+                    <div class="col-md-3 col-sm-12">
+                        <div class="card">
+                            <img class="card-img-top" src="agenda.offerta.jpg" />
+                            <div class="card-body">
+                                <h5 class="card-title"><em>Agenda 2023
+                                    </em></h5>
+                                <h6>Offerta - 10.99€</h6>
+                                <br />
+                                <a href="#" data-name="Agenda" data-price="10.99" class="add-to-cart btn btn-primary">Aggiungi al carrello</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-12">
+                        <div class="card">
+                            <img class="card-img-top" src="organizer.offerta.jpg" />
+                            <div class="card-body">
+                                <h5 class="card-title"><em>Organizer
+                                    </em></h5>
+                                <h6>Offerta - 57.89€ </h6>
+                                <br />
+                                <a href="#" data-name="Organizer" data-price="57.89" class="add-to-cart btn btn-primary">Aggiungi al carrello</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-12">
+                        <div class="card">
+                            <img class="card-img-top" src="shop.offerte.jpg" />
+                            <div class="card-body">
+                                <h5 class="card-title"><em>Shopping Bag </em></h5>
+                                <h6>Offerta - 5.99€</h6>
+                                <br />
+                                <a href="#" data-name="Shopping Bag" data-price="5.99" class="add-to-cart btn btn-primary">Aggiungi al carrello</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-12">
+                        <div class="card">
+                            <img class="card-img-top" src="box.colori.offerta.jpg" />
+                            <div class="card-body">
+                                <h5 class="card-title"><em>Box Colori a tempera</em></h5>
+                                <h6>Offerta - 25.00€</h6>
+                                <br />
+                                <a href="#" data-name="Box Colori a tempera" data-price="25.00" class="add-to-cart btn btn-primary">Aggiungi al carrello</a>
+                            </div>
+                        </div>
+                    </div>
+                    <br /><br />
+                    <!--SECONDA FILA DI CARD-->
+
+                    <div class="col-md-3 col-sm-12">
+                        <div class="card">
+                            <!--immagine inserita affinchè sia ottimizzata per stare in cima alla card-->
+                            <img class="card-img-top" src="colori.a.tempera.box.offerta.jpg" />
+                            <!--corpo della-->
+                            <div class="card-body">
+                                <h5 class="card-title"><em>Colori a tempera</em></h5>
+                                <h6>Offerta - 19.99€</h6>
+                                <br />
+                                <a href="#" data-name="Colori a tempera" data-price="19.99" class="add-to-cart btn btn-primary">Aggiungi al carrello</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-12">
+                        <div class="card">
+                            <img class="card-img-top" src="pennelli.pittura.offerte.jpg" />
+                            <div class="card-body">
+                                <h5 class="card-title"><em>Pennelli</em></h5>
+                                <h6>Offerta - 17.99€</h6>
+                                <br />
+                                <a href="#" data-name="Pennelli" data-price="17.99" class="add-to-cart btn btn-primary">Aggiungi al carrello</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-12">
+                        <div class="card">
+                            <img class="card-img-top" src="astuccio.offerta.jpg" />
+                            <div class="card-body">
+                                <h5 class="card-title"><em>Astuccio Smile 2pz.</em></h5>
+                                <h6>Offerta - 15.00€</h6>
+                                <br />
+                                <a href="#" data-name="Astuccio" data-price="15.00" class="add-to-cart btn btn-primary">Aggiungi al carrello</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-12">
+                        <div class="card">
+                            <img class="card-img-top" src="neon.cloud.offerta.jpg" />
+                            <div class="card-body">
+                                <h5 class="card-title"><em>Nuvola Neon</em></h5>
+                                <h6>offerta - 18.00€</h6>
+                                <br />
+                                <a href="#" data-name="Nuvola Neon" data-price="18.00" class="add-to-cart btn btn-primary">Aggiungi al carrello</a>
+                            </div>
+                        </div>
+                    </div>
+                    <br /><br />
+                    <!--TERZA FILA DI CARD-->
+
+                    <div class="col-md-3 col-sm-12">
+                        <div class="card">
+                            <img class="card-img-top" src="lampada.hand.offerta.jpg" />
+                            <div class="card-body">
+                                <h5 class="card-title"><em>Lampada scrivania</em></h5>
+                                <h6>Offerta - 35.00€</h6>
+                                <br />
+                                <a href="#" data-name="Lampada" data-price="35.00" class="add-to-cart btn btn-primary">Aggiungi al carrello</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12">
+                        <div class="card">
+                            <img class="card-img-top" src="portachiavi.lego.offerta.jpg" />
+                            <div class="card-body">
+                                <h5 class="card-title"><em>Portachiavi Lego</em></h5>
+                                <h6>Offerta - 16.89€</h6>
+                                <br />
+                                <a href="#" data-name="Portachiavi" data-price="16.89" class="add-to-cart btn btn-primary">Aggiungi al carrello</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-12">
+                        <div class="card">
+                            <img class="card-img-top" src="sunflower.offerta.jpg" />
+                            <div class="card-body">
+                                <h5 class="card-title"><em>Agenda Girasoli</em></h5>
+                                <h6>Offerta - 9.50€</h6>
+                                <br />
+                                <a href="#" data-name="Agenda" data-price="9.50" class="add-to-cart btn btn-primary">Aggiungi al carrello</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-12">
+                        <div class="card">
+                            <img class="card-img-top" src="orologio.offerta.jpg" />
+                            <div class="card-body">
+                                <h5 class="card-title"><em>Orologio</em></h5>
+                                <h6>Offerta - 27.49€</h6>
+                                <br />
+                                <a href="#" data-name="Orologio" data-price="27.49" class="add-to-cart btn btn-primary">Aggiungi al carrello</a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <!--FINE TERZA FILA DI CARD-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+ <!--Inizio footer-->
+ <section id="footer">
+    <img src="wave1.png" class="footer-img" />
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 footer-box">
+                <img src="Cancelleria ArtSquare.png">
+                <!--logo-->
+                <p>© Cartoleria Moon. All Rights Reserved
+                </p>
+            </div>
+            <div class="col-md-4 footer-box">
+                <p><b>DOVE TROVARCI:</b></p>
+                <p><i class="fa-solid fa-map-location"></i> Via delle Ginestre, 89 (RM)</p>
+                <p><i class="fa fa-phone"></i> 081-540-9870</p>
+                <p><i class="fa fa-envelope-o"></i> Moon@info.com</p>
+            </div>
+
+            <div class="col-md-4 footer-box">
+                <p><b>ISCRIVITI ALLA NEWSLETTER</b></p>
+                <input type="email" class="form-control" placeholder="Inserisci la tua e-mail">
+                <button type="button" class="btn btn-primary">Iscriviti</button>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="Cart.js"></script>
+</body>
+
+</html>
